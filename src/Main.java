@@ -7,6 +7,9 @@ public class Main {
         System.out.println("Середня значення елементів масиву = "+ averageNumber(arr));
         //Task 2
         minAndMax(arr);
+
+        //Task 3
+        revertArr(arr);
     }
     public static int averageNumber(int[] numbers) {
         int sum = 0;
@@ -22,5 +25,11 @@ public class Main {
         int max = numbers[numbers.length - 1];
         int min = numbers[0];
         System.out.println("min = " + min + " max = " + max);
+    }
+    public static void revertArr(int[] numbers) {
+        System.out.print("Масив в зворотньому порядку: ");
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.print(numbers[i] + " ");
+        }
     }
 }
