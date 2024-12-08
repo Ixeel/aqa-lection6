@@ -21,6 +21,9 @@ public class Main {
         //Task 8.6
         System.out.println(doubleChars("AAbb"));
 
+        //Task 8.7
+        System.out.println(countHi("ABChi hi"));
+
     }
     public static int countEvenInts(int [] array) {
         int count = 0;
@@ -79,5 +82,17 @@ public class Main {
             result.append(c).append(c);
         }
         return result.toString();
+    }
+
+    public static int countHi(String str) {
+        char[] charArray = str.toCharArray();
+        int count = 0;
+        for (int i = 0; i<charArray.length-1; i++){
+            if (charArray[i] == 'h' && charArray[i+1] == 'i'){
+                count++;
+            }
+        }
+
+        return count;
     }
 }
