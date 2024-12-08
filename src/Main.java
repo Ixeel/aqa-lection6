@@ -14,6 +14,10 @@ public class Main {
         int[] array3 = {1, 2, 2, 13, 2};
         System.out.println(sumWithoutUnlucky13(array3));
 
+        //Task 8.5
+        int[] array4 = {2, 10, 7, 2};
+        System.out.println(differenceLargestSmallest(array4));
+
     }
     public static int countEvenInts(int [] array) {
         int count = 0;
@@ -55,5 +59,13 @@ public class Main {
 
         }
         return sum;
+    }
+
+    public static int differenceLargestSmallest(int [] array) {
+        Arrays.sort(array);
+        int min = array[0];
+        int max = array[array.length-1];
+
+        return max-min;
     }
 }
