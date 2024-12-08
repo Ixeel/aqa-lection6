@@ -34,6 +34,8 @@ public class Main {
         //Task 8.8
         System.out.println(countCode("aaacodebbb"));
 
+        //Task 8.9
+        System.out.println(endsWith("AbC", "HiaBc"));
     }
     public static int countEvenInts(int [] array) {
         int count = 0;
@@ -148,6 +150,14 @@ String substring = str.substring(i, i+3);
             }
         }
         return sum;
+    }
+
+    public static boolean endsWith(String str1, String str2) {
+       str1 = str1.toLowerCase();
+       str2 = str2.toLowerCase();
+        String substring1 = str1.substring(str1.length()-3);
+        String substring2 = str2.substring(str2.length()-3);
+        return substring1.equals(substring2);
     }
 
 }
