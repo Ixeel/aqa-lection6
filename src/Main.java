@@ -13,6 +13,10 @@ public class Main {
         int[] array2 = {-10, -4, -2, -4, -2, 0};
         System.out.println(centeredAverage(array2));
 
+        //Task 8.3
+        int[] arraySumIgnore = {1, 2, 2};
+        System.out.println(sumIgnoreSections(arraySumIgnore));
+
         //Task 8.4
         int[] array3 = {1, 2, 2, 13, 2};
         System.out.println(sumWithoutUnlucky13(array3));
@@ -128,4 +132,22 @@ String substring = str.substring(i, i+3);
         }
         return cat == dog;
     }
+
+    public static int sumIgnoreSections(int [] array) {
+        int sum = 0;
+        boolean flag = false;
+        for (int i = 0; i< array.length; i++){
+            if (array[i] == 6){
+                flag = true;
+            }
+            if (!flag){
+                sum = sum + array[i];
+            }
+            else if (array[i] == 7 && flag){
+                flag = false;
+            }
+        }
+        return sum;
+    }
+
 }
