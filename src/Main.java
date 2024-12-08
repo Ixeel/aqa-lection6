@@ -6,6 +6,9 @@ public class Main {
         int[] array = {2,2,0};
         System.out.println(countEvenInts(array));
 
+        //Task 8.1
+        System.out.println(catDog("1cat1cadodog"));
+
         //Task 8.2
         int[] array2 = {-10, -4, -2, -4, -2, 0};
         System.out.println(centeredAverage(array2));
@@ -109,5 +112,20 @@ public class Main {
         }
 
         return count;
+    }
+
+    public static boolean catDog(String str) {
+        int cat = 0;
+        int dog = 0;
+
+        for (int i = 0; i < str.length() - 2; i++) {
+String substring = str.substring(i, i+3);
+            if (substring.equals("cat")) {
+                cat++;
+            } else if (substring.equals("dog")) {
+                dog++;
+            }
+        }
+        return cat == dog;
     }
 }
