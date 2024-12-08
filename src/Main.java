@@ -24,6 +24,9 @@ public class Main {
         //Task 8.7
         System.out.println(countHi("ABChi hi"));
 
+        //Task 8.8
+        System.out.println(countCode("aaacodebbb"));
+
     }
     public static int countEvenInts(int [] array) {
         int count = 0;
@@ -89,6 +92,18 @@ public class Main {
         int count = 0;
         for (int i = 0; i<charArray.length-1; i++){
             if (charArray[i] == 'h' && charArray[i+1] == 'i'){
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static int countCode(String str) {
+        char[] charArray = str.toCharArray();
+        int count = 0;
+        for (int i = 0; i<charArray.length-1; i++){
+            if (charArray[i] == 'c' && charArray[i+1] == 'o' && charArray[i+3] == 'e'){
                 count++;
             }
         }
