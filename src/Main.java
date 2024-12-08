@@ -18,6 +18,9 @@ public class Main {
         int[] array4 = {2, 10, 7, 2};
         System.out.println(differenceLargestSmallest(array4));
 
+        //Task 8.6
+        System.out.println(doubleChars("AAbb"));
+
     }
     public static int countEvenInts(int [] array) {
         int count = 0;
@@ -67,5 +70,14 @@ public class Main {
         int max = array[array.length-1];
 
         return max-min;
+    }
+
+    public static String doubleChars(String str) {
+        char[] charArray = str.toCharArray();
+        StringBuilder result = new StringBuilder();
+        for (char c : charArray) {
+            result.append(c).append(c);
+        }
+        return result.toString();
     }
 }
