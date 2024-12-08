@@ -9,6 +9,11 @@ public class Main {
         //Task 8.2
         int[] array2 = {-10, -4, -2, -4, -2, 0};
         System.out.println(centeredAverage(array2));
+
+        //Task 8.4
+        int[] array3 = {1, 2, 2, 13, 2};
+        System.out.println(sumWithoutUnlucky13(array3));
+
     }
     public static int countEvenInts(int [] array) {
         int count = 0;
@@ -37,5 +42,18 @@ public class Main {
         sum = sum - max;
 
         return sum / (arr.length - 2);
+    }
+
+    public static int sumWithoutUnlucky13(int [] array) {
+        int sum = 0;
+        for (int j : array) {
+            if (j != 13) {
+                sum = sum + j;
+            } else {
+                return sum;
+            }
+
+        }
+        return sum;
     }
 }
